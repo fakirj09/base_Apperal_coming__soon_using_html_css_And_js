@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+:root {
+  --red: hsl(0, 93%, 68%);
+  --red-light: hsl(0, 36%, 70%);
+  --dark: hsl(0, 6%, 24%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url('./images/bg-pattern-desktop.svg'),
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-size: 60% 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+.logo-img {
+  margin: 3rem;
+  margin-left: 7rem;
+}
+.hero-desktop {
+  float: right;
+  position: relative;
+  top: -140px;
+}
+.hero-img img.hero-desktop {
+  height: 100%;
+}
+.hero-img img.hero-mobile {
+  display: none;
+}
+.were {
+  text-transform: uppercase;
+  margin: 3rem;
+  font-size: 4rem;
+  font-weight: lighter;
+  color: var(--red-light);
+  margin-top: 30px;
+  letter-spacing: 1.4rem;
+  margin-left: 7rem;
+}
+.coming-soon {
+  font-weight: 800;
+  color: var(--dark);
+}
+.content {
+  color: var(--red-light);
+  margin-bottom: 3rem;
+  line-height: 1.8rem;
+  margin-left: 7rem;
+}
+.form-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.form {
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 7rem;
+}
+.email-ad {
+  color: var(--red-light);
+  padding: 20px;
+  border-radius: 40px;
+  border: 2px solid var(--red);
+  width: 400px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  font-size: 16px;
+}
+
+button {
+  padding: 18px;
+  width: 4rem;
+  height: 100%;
+  background: linear-gradient(90deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 5px 20px 3px hsl(0, 80%, 86%);
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+input::placeholder {
+  color: var(--red-light);
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+.text-error {
+  color: var(--red);
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-left: 8rem;
+}
+
+.text-success {
+  color: #44d838;
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.icon-error {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5.8rem;
+  display: none;
+}
+
+@media screen and (max-width: 1020px) {
+  body {
+    background-color: var(--dark);
+  }
+  .container {
+    margin: 0;
+    height: auto;
+    min-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    margin: 2rem 0;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero-img img.hero-desktop {
+    display: none;
+  }
+
+  .hero-img img.hero-mobile {
+    display: block;
+    width: 100%;
+    padding: 3rem;
+  }
+
+  .content {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 5rem 1rem;
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+}
